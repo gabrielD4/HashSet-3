@@ -7,6 +7,7 @@ public class Main {
         HashSet<String> myFruits = getStringHashSet();
         String fruitIDoNotLike = "orange";
         removeElement(myFruits, fruitIDoNotLike);
+        emptyList(myFruits);
     }
 
     public static HashSet<String> getStringHashSet() {
@@ -30,5 +31,13 @@ public class Main {
             }
         }
         System.out.println("Inside list: " + listOfFruits + " there is no fruit: " + fruit);
+    }
+
+    public static void emptyList (HashSet<String> listOfFruits) {
+        if (!listOfFruits.isEmpty()) {
+            System.out.println("List: "+ listOfFruits + " is not empty. \nProceed to empty the list");
+            listOfFruits.clear();
+        }
+        System.out.println("List my fruits: " + listOfFruits + " is empty");
     }
 }
